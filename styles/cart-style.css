@@ -1,0 +1,275 @@
+@import url(style.css);
+
+
+.shopping-cart{
+    display: flex;
+
+    height: 148px;
+    width: 100%;
+    background: #F8F3F4;
+}
+
+.shopping-cart__text{
+    display: flex;
+  
+    
+    align-items: center;
+    margin-left: 230px;
+
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #F16D7F;
+}
+
+.your-cart{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 96px;
+    margin-left: 15px;
+
+    column-gap: 128px;
+    max-width: 1140px;  
+}
+
+.your-cart__block,
+.your-cart__block_left{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 800px;
+    width: 652px;
+}
+
+.your-cart__block_left{
+    gap: 55px;
+    width: 360px;  
+}
+
+.your-cart__block__buttons-block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 193px;
+
+    margin-top: 33px;
+
+    height: 49px;
+    width: 651px;
+}
+
+.your-cart__block__buttons-block__clear, 
+.your-cart__block__buttons-block__continue{
+    height: 49px;
+    width: 239px;
+
+    border: 1px solid #A4A4A4;
+    text-transform: uppercase;;
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+
+    background: #FFFFFF;
+}
+
+.your-cart__block__buttons-block__continue{
+    width: 226px;
+}
+
+
+.your-cart__block__staff-box, 
+.your-cart__form{
+    display: flex;
+    gap: 32px;
+    height: 306px;
+    box-shadow: 17px 19px 24px 0px #00000021;
+}
+
+.your-cart__form{
+    margin-top: 17px;
+    flex-direction: column;
+    gap: 20px;
+    height: 272px;
+    width: 360px;
+    box-shadow: 0px 0px 0px 0px #00000021;
+}
+
+
+.your-cart__form__title{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #222222;
+}
+
+
+.your-cart__form__fields{
+    height: 43px;
+    width: 360;
+
+    padding: 0rem 1.1rem;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+
+    border: 1px solid #A4A4A4;
+}
+
+.your-cart__form__button{
+    margin-top: 5px;
+    height: 34px;
+    width: 103px;
+
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+
+    color: #4A4A4A;
+
+    background-color: #FFFFFF;
+    border: 1px solid #A4A4A4;
+}
+
+
+.your-cart__photo{
+    height: 306px;
+    width: 262px;
+}
+
+.your-cart__text-block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 43px;
+    margin-top: 22px;
+    height: 306px;
+    width: 210px;
+}
+
+.your-cart__text-block__title{
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #222222;
+}
+
+.your-cart__text-block__main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 6px;
+
+    height: 200px;
+    width: 210px;
+}
+
+.your-cart__text-block__main__text, 
+.your-cart__text-block__main__text__accent{
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #575757;
+}
+
+.your-cart__text-block__main__text__accent{
+    color: #EF5B70;
+}
+
+.your-cart__quantity{
+    margin-left: 25px;
+    width: 37px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 16px;
+    color: #656565;
+    border: 1px solid #EAEAEA;
+}
+
+.your-cart__cheque{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 19px;
+
+    height: 214px;
+    width: 360px;
+    text-align: end;
+
+    background: #F5F3F3; 
+}
+
+.your-cart__cheque__text-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    gap: 12px;
+    margin-top: 41px;
+    margin-left: 47px;
+
+    height: 45px;
+    width: 250px;
+}
+
+.your-cart__cheque__text-box__sub-total, 
+.your-cart__cheque__text-box__sub-total_price{
+    font-size: 11px;
+    line-height: 13px;
+
+    color: #4A4A4A;
+}
+
+.your-cart__cheque__text-box__sub-total_price{
+    margin-left: 25px;
+}
+
+.your-cart__cheque__text-box__grand-total,
+.your-cart__cheque__text-box__grand-total_price{
+    margin-right: 2px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #4A4A4A;
+}
+
+.your-cart__cheque__text-box__grand-total_price{
+    margin-left: 22px;
+    font-weight: 700;
+    line-height: 19px;
+    font-size: 16px;
+    
+    color: #F16D7F;
+}
+
+.your-cart__cheque__line{
+    height: 1px;
+    width: 275px;
+
+    background: #E2E2E2;
+}
+
+.your-cart__cheque__submit{
+    height: 50px;
+    width: 273px;
+    border: 0px;
+    
+    background: #F16D7F;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+}
+

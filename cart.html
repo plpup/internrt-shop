@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
-    <link rel="stylesheet" href="cart-style.css">
+    <link rel="stylesheet" href="styles/cart-style.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="header__logo-search">
-            <img class="header__logo-search__logo" src="images\logo.png">
-            <img class="header__logo-search__search" src="images\search.png">
+        <div class="header__logo-and-search">
+            <img class="header__logo-and-search__logo" src="images\logo.png" alt="">
+            <img class="header__logo-and-search__search" src="images\search.png" alt=""> 
         </div>
 
         <div class="header__buttons">
-            <img class="header__buttons__button-menu" src="images\menu.png">
-            <img class="header__buttons__button-profile" src="images\profile.png">
-            <div class="header__buttons__button-cart">
+            <img class="header__buttons__button-menu" src="images\menu.png" alt="">
+            <img class="header__buttons__button-profile" src="images\profile.png" alt="">
+            <a class="header__buttons__button-cart" href="cart.html">
                 <div class="header__buttons__button-cart__notify">
                     <span class="header__buttons__button-cart__notify__text">5</span>
                 </div>
-                <img class="header__buttons__button-cart__cart" src="images\cart.png">
-            </div> 
+                <img class="header__buttons__button-cart__cart" src="images\cart.png" alt="">
+            </a>  
             
             
         </div>
@@ -33,49 +35,101 @@
     </section>
 
     <section class="your-cart">
-        <div class="your-cart__staff-box">
-            <img class="your-cart__photo" src="images\3.png">
-            <div class="your-cart__text-block">
-                <span class="your-cart__text-block__title">MANGO PEOPLE T-SHIRT</span>
+        <div class="your-cart__block">
+            <div class="your-cart__block__staff-box">
+                <img class="your-cart__photo" src="images\3.png" alt="">
+                <div class="your-cart__text-block">
+                    <span class="your-cart__text-block__title">MANGO PEOPLE T-SHIRT</span>
+                    <div class="your-cart__text-block__main">
+                        <div class="your-cart__text-block__main__text">Price: 
+                            <span class="your-cart__text-block__main__text__accent">$300</span>
+                        </div>
+                        <div class="your-cart__text-block__main__text">Color: Red</div>
+                        <div class="your-cart__text-block__main__text">Size: Xl</div>
+                        <div class="your-cart__text-block__main__text">Quantity: 
+                            <input class="your-cart__quantity" placeholder="0"></input>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="your-cart__block__staff-box">
+                <img class="your-cart__photo" src="images\mango-man.png" alt="">
+                <div class="your-cart__text-block">
+                    <span class="your-cart__text-block__title">MANGO PEOPLE T-SHIRT</span>
+                    <div class="your-cart__text-block__main">
+                        <div class="your-cart__text-block__main__text">Price: 
+                            <span class="your-cart__text-block__main__text__accent">$300</span>
+                        </div>
+                        <div class="your-cart__text-block__main__text">Color: Red</div>
+                        <div class="your-cart__text-block__main__text">Size: Xl</div>
+                        <div class="your-cart__text-block__main__text">Quantity: 
+                            <input class="your-cart__quantity" placeholder="0"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="your-cart__block__buttons-block">
+                <button class="your-cart__block__buttons-block__clear">Clear shopping cart</button>
+                <button class="your-cart__block__buttons-block__continue">Continue shopping</button>
+            </section>
         </div>
-        <div class="your-cart__staff-box">
-            <img class="your-cart__photo" src="images\mango-man.png">
+       
+        <div class="your-cart__block_left">
+           
+                <form class="your-cart__form">
+                    <span class="your-cart__form__title">SHIPPING ADRESS</span>
+                    <input class="your-cart__form__fields your-cart__form__fields__text" placeholder="Country"></input>
+                    <input class="your-cart__form__fields your-cart__form__fields__text" placeholder="State"></input>
+                    <input class="your-cart__form__fields your-cart__form__fields__text" placeholder="Postcode / Zip"></input>
+                    <button class="your-cart__form__button">GET A QUOT</button>
+                </form>
+                <div class="your-cart__cheque">
+                    <div class="your-cart__cheque__text-box">
+                        <span class="your-cart__cheque__text-box__sub-total">SUB TOTAL <span class="your-cart__cheque__text-box__sub-total_price">$900</span></span>
+                        <span class="your-cart__cheque__text-box__grand-total">GRAND TOTAL <span class="your-cart__cheque__text-box__grand-total_price">$900</span></span>
+                    </div>
+                    <div class="your-cart__cheque__line"></div>
+                    <button class="your-cart__cheque__submit">PROCEED TO CHECKOUT</button>
+                </div>
+              
         </div>
     </section>
 
-
-
-    <section class="subscribe-box">
-        <div class="subscribe-box__subscribe-info-block">
-            <div class="subscribe-box__subscribe-info-block__photo">
-                <img src="images/subscribe-women.png">
+    <section class="subscribe">
+        <div class="subscribe-box">
+            <div class="subscribe-box__subscribe-info-block">
+                <div class="subscribe-box__subscribe-info-block__photo">
+                    <img src="images/subscribe-women.png" alt="">
+                </div>
+                <div class="subscribe-box__subscribe-info-block__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, 
+                    <span class="subscribe-box__subscribe-info-block__text_italic">a pulvinar purus condimentum“</span>
+                </div>
             </div>
-            <div class="subscribe-box__subscribe-info-block__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, 
-                <span class="subscribe-box__subscribe-info-block__text_italic">a pulvinar purus condimentum“</span>
-            </div>
-        </div>
-        <div class="subscribe-box__subscribe">
-            <div class="subscribe-box__subscribe__text-block">
-                <div class="subscribe-box__subscribe__text-block__title">SUBSCRIBE</div>
-                <div class="subscribe-box__subscribe__text-block__main-text">FOR OUR NEWLETTER AND PROMOTION</div>
-            </div>
-            <div class="subscribe-box__subscribe__accept-block">
-                <input class="subscribe-box__subscribe__accept-block__email" placeholder="Enter Your Email"></input>
-                <div class="subscribe-box__subscribe__accept-block__button">
-                    <div class="subscribe-box__subscribe__accept-block__button__text">Subscribe</div>
+            <div class="subscribe-box__subscribe">
+                <div class="subscribe-box__subscribe__text-block">
+                    <div class="subscribe-box__subscribe__text-block__title">SUBSCRIBE</div>
+                    <div class="subscribe-box__subscribe__text-block__main-text">FOR OUR NEWLETTER AND PROMOTION</div>
+                </div>
+                <div class="subscribe-box__subscribe__accept-block">
+                    <input class="subscribe-box__subscribe__accept-block__email" placeholder="Enter Your Email"></input>
+                    <div class="subscribe-box__subscribe__accept-block__button">
+                        <div class="subscribe-box__subscribe__accept-block__button__text">Subscribe</div>
+                    </div>
                 </div>
             </div>
         </div>
+        <img class="subscribe" src="images/photo-subscribe.png" alt="">
     </section>
 
     <footer class="footer">
-        <span class="footer__text">© 2021 Brand All RightsReserved.</span>
+        <div class="footer__text-box">
+            <span class="footer__text-box__text">© 2021 Brand All RightsReserved.</span>
+        </div>
         <div class="footer__logos">
-            <div class="footer__logos__each"><img class="footer__logos__each__img" src="images/facebook.png"></div>
-            <div class="footer__logos__each"><img class="footer__logos__each__img" src="images/instagram.png"></div>
-            <div class="footer__logos__each"><img class="footer__logos__each__img" src="images/pinterest.png"></div>
-            <div class="footer__logos__each"><img class="footer__logos__each__img" src="images/twitter.png"></div>
+            <div class="footer__logos__each"><img class="footer__logos__each__img" src="images/facebook.png" alt=""></div>
+            <div class="footer__logos__each"><img class="footer__logos__each__img" src="images/instagram.png" alt=""></div>
+            <div class="footer__logos__each"><img class="footer__logos__each__img" src="images/pinterest.png" alt=""></div>
+            <div class="footer__logos__each"><img class="footer__logos__each__img" src="images/twitter.png" alt=""></div>
         </div>
     </footer>
 </body>
