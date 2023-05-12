@@ -1,0 +1,16 @@
+.shop__blocks__img:hover{
+    filter: brightness(30%);
+}
+
+.browse-box:hover{
+    color: #ffffff;
+    background:  #F16D7F; 
+}
+
+.subscribe-box__subscribe__accept-block__button:hover {
+    background: #E05C6E;
+}
+  
+.subscribe-box__subscribe__accept-block__button:active {
+    background: #b84050;
+}
