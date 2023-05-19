@@ -1,0 +1,23 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(hover.css);
+@import url(cart-style.css);
+@import url(brand.css);
+@import url(categories.css);
+@import url(shop.css);
+@import url(feauture-box.css);
+@import url(subscribe-box.css);
+@import url(media.css);
+@import url(variables.scss);
+
+
+body {
+width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+}
