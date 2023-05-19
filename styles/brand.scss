@@ -1,0 +1,150 @@
+$main-font-color: #222222;
+$footer-color: #222224;
+$accent-font-color: #F16D7F;
+$hover-text-color: #ffffff;
+$hover-color: #F16D7F;
+$notify-color: #F16D7F;
+$category-font-color: #FFFFFF;
+$feature-font-color: #FBFBFB;
+$decoration-color: #F16D7F;
+$submit-button-color: #F16D7F;
+$submit-button-color-hover: #b84050;
+$brand-background-color: #F1E4E6;
+$shopping-cart-background: #F8F3F4;
+$box-shadow-color: #00000021;
+$form-fields-color: #B1B1B1;
+$form-fields-border-color: #A4A4A4;
+$sub-total-price-color: #4A4A4A;
+
+.brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    @media (max-width: 750px){
+        max-width: 375px;
+    }
+
+    &-background{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 4%;
+        height: 764px;
+        width: 100%;
+        background-color: $brand-background-color;
+        @media (max-width: 1025px) and (min-width: 750px){
+            height: 367px;
+            width: 100%;
+        }
+        @media (max-width: 750px){
+            height: 367px;
+            width: 100%;
+        }
+    }
+
+    &__photo{ 
+        width: 800px;
+        height: 764px;;
+        @media (max-width: 1025px) and (min-width: 750px){
+            height: 368px;
+            width: 386px;
+        }
+        @media (max-width: 750px){
+            height: 0px;
+            width: 0px;
+        }
+    }
+
+    &__decoration-and-text{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-top: -90px;
+        gap: 15px;
+        width: 700px;
+        height: 93px;
+        @media (max-width: 1025px) and (min-width: 750px){
+            margin-top: -5px;
+        }
+        @media (max-width: 750px){
+            margin-top: -5px;
+        }
+
+        &__decoration{
+            height: 92px;
+            width: 12px;
+            margin-right: 0px;
+            background: $decoration-color;
+            @media (max-width: 1025px) and (min-width: 750px){
+                margin-left: 10px;
+            }
+            @media (max-width: 750px){
+                height: 61px;
+                margin-left: 40px;
+            }
+        }
+
+        &__text-block{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 700px;
+            height: 93px; 
+            
+            &__text_main{
+                position: relative;
+                font-size: 48px;
+                font-weight: 900;
+                line-height: 58px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $main-font-color;
+                @media (max-width: 1025px) and (min-width: 750px){
+                    font-size: 44px;
+                    line-height: 40px;
+                }
+                @media (max-width: 750px){
+                    font-size: 38px;
+                    line-height: 40px;
+                }
+            }
+    
+            &__text_secondary{
+                position: relative;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 38px;
+                letter-spacing: 0em;
+                text-align: left;         
+                color: $main-font-color;
+                @media (max-width: 1025px) and (min-width: 750px){
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+                @media (max-width: 750px){
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                &_accent{
+                    position: relative;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 38px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: $accent-font-color;
+                    @media (max-width: 1025px) and (min-width: 750px){
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+                    @media (max-width: 750px){
+                        font-size: 20px;
+                        line-height: 29px;
+                    }
+                }
+            }
+        }
+    }
+}

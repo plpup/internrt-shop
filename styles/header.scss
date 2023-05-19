@@ -1,0 +1,127 @@
+$main-font-color: #222222;
+$footer-color: #222224;
+$accent-font-color: #F16D7F;
+$hover-text-color: #ffffff;
+$hover-color: #F16D7F;
+$notify-color: #F16D7F;
+$category-font-color: #FFFFFF;
+$feature-font-color: #FBFBFB;
+$decoration-color: #F16D7F;
+$submit-button-color: #F16D7F;
+$submit-button-color-hover: #b84050;
+$brand-background-color: #F1E4E6;
+$shopping-cart-background: #F8F3F4;
+$box-shadow-color: #00000021;
+$form-fields-color: #B1B1B1;
+$form-fields-border-color: #A4A4A4;
+$sub-total-price-color: #4A4A4A;
+
+.header{
+    display: flex;
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+    gap: 54%;
+    width: 100%;
+    background: $main-font-color;
+
+    &__logo-and-search{
+        display: flex;
+        height: 38px;
+        width: 111px;
+        flex-direction: row;
+        align-items: center;
+        gap: 35%;
+        @media (max-width: 750px){
+            margin-left: 25px;
+        }
+
+        &_logo{
+            width: 44px;
+            height: 38px;
+        }
+
+        &__search{
+            margin-top: 10px;
+            width: 26px;
+            height: 27px;
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        height: 38px;
+        width: 111px;
+        flex-direction: row;
+        align-items: center;
+        gap: 32%;
+        margin-top: 10px;
+        margin-right: 2.5%;
+        @media (max-width: 750px){
+            gap: 0%;
+            margin-top: 10px;
+            margin-right: 0%;
+        }
+
+        &__button-menu{
+            width:32px;
+            height:23px;
+        }
+
+        &__button-profile{
+            width:29px;
+            height:29px;
+            @media (max-width: 750px){
+                width: 0px;
+                height: 0px;
+            }
+        }
+
+        &__button-cart{
+            width:41px;
+            height:37px;
+            @media (max-width: 750px){
+                width: 0px;
+                height: 0px;
+            }
+
+            &__cart{
+                width:32px;
+                height:29px;
+                @media (max-width: 750px){
+                    width: 0px;
+                    height: 0px;
+                }
+            }
+
+            &__notify{
+                position: absolute;
+                margin-left: 20px;
+                margin-top: -5px;
+                width: 19px; 
+                height: 19px;
+                background: $notify-color;
+                border-radius: 50%;
+                @media (max-width: 750px){
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    width: 0px; 
+                    height: 0px;
+                    border-radius: 0%;
+                }
+
+                &__text{
+                    position: relative;
+                    margin-left: 5px;
+                    font-size: 15px;
+                    line-height: 14px;
+                    text-align: center;
+                    color: $category-font-color;
+                    @media (max-width: 750px){
+                        font-size: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
