@@ -65,13 +65,13 @@
   display: flex;
   align-items: start;
   justify-content: center;
-  height: 581px;
   width: 360px;
+  height: 581px;
   background: #F8F8F8;
 }
 .shop__blocks__img {
-  height: 420px;
   width: 360px;
+  height: 420px;
 }
 .shop__blocks__img:hover {
   filter: brightness(30%);
@@ -81,8 +81,8 @@
   flex-direction: column;
   position: absolute;
   gap: 15px;
-  height: 116.7px;
   width: 314.8px;
+  height: 116.7px;
   margin-top: 443px;
   margin-right: 14px;
 }
@@ -109,8 +109,8 @@
 .browse-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-top: 47px;
   margin-left: 19px;
   min-height: 47px;

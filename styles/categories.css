@@ -36,20 +36,20 @@
 }
 @media (max-width: 1025px) and (min-width: 750px) {
   .categories__blocks {
-    height: 167px;
     width: 232px;
+    height: 167px;
   }
 }
 @media (max-width: 750px) {
   .categories__blocks {
-    height: 247px;
     width: 343px;
+    height: 247px;
   }
 }
 .categories__blocks__text-block {
   position: absolute;
-  height: 50px;
   width: 160px;
+  height: 50px;
   text-align: center;
 }
 .categories__blocks__text-block__white-text {
@@ -77,13 +77,13 @@
 }
 @media (max-width: 1025px) and (min-width: 750px) {
   .categories__second-row {
-    height: 116px;
     width: 735px;
+    height: 116px;
   }
 }
 @media (max-width: 750px) {
   .categories__second-row {
-    height: 111px;
     width: 343px;
+    height: 111px;
   }
 }/*# sourceMappingURL=categories.css.map */

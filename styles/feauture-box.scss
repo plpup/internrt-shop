@@ -16,12 +16,20 @@ $form-fields-color: #B1B1B1;
 $form-fields-border-color: #A4A4A4;
 $sub-total-price-color: #4A4A4A;
 
+@mixin size ($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin display ($display: flex, $flex-direction: row, $align-items: normal, $flex-wrap: nowrap, $justify-content: flex-start){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify-content;
+}
+
 .feature-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap; 
+    @include display (flex, row, center, wrap, center);
     width: 100%;
     max-width: 1600px;
     min-height: 345px;
@@ -44,33 +52,26 @@ $sub-total-price-color: #4A4A4A;
     }
 
     &__blocks{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        @include display (flex, column, center, nowrap, center);
         min-height: 250px;
         width: 360px;
         background: $main-font-color;
         @media (max-width: 1025px) and (min-width: 750px){
-            width: 700px;
+            @include size(700px , 150px);
             min-height: 150px;
-            height: 150px;
         }
         @media (max-width: 750px){
-            width: 375px;
+            @include size(375px , 150px);
             min-height: 150px;
-            height: 150px;
         }
 
         &__img{
-            height: 40px;
-            width: 40px;
+            @include size(40px , 40px);
         }
 
         &__text-block{
             margin-top: 20px;
-            height: 74px;
-            width: 360px;
+            @include size(360px , 74px);
             text-align: center;
 
             &__title-text{
@@ -84,8 +85,7 @@ $sub-total-price-color: #4A4A4A;
                 position: relative;
                 margin-left: 22px;
                 margin-top: 18px;
-                height: 24px;
-                width: 320px;
+                @include size(320px , 24px);
                 font-weight: 300;
                 font-size: 13.972px;
                 line-height: 17px;

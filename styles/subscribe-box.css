@@ -1,7 +1,7 @@
 .subscribe {
   width: 100%;
-  max-width: 1600px;
   height: 448px;
+  max-width: 1600px;
   min-height: 400px;
 }
 @media (max-width: 1025px) and (min-width: 750px) {
@@ -22,8 +22,8 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1600px;
   height: 448px;
+  max-width: 1600px;
   min-height: 400px;
   -moz-column-gap: 230px;
        column-gap: 230px;
@@ -42,9 +42,9 @@
 }
 .subscribe-box__subscribe-info-block {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   width: 359.45px;
   min-height: 150px;
 }
@@ -54,8 +54,8 @@
 }
 .subscribe-box__subscribe-info-block__text {
   position: relative;
-  height: 99px;
   width: 359px;
+  height: 99px;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
@@ -73,8 +73,8 @@
 .subscribe-box__subscribe {
   margin-top: 50px;
   min-height: 150px;
+  width: 667px;
   height: 142px;
-  width: 557px;
 }
 @media (max-width: 1025px) and (min-width: 750px) {
   .subscribe-box__subscribe {
@@ -88,8 +88,8 @@
   }
 }
 .subscribe-box__subscribe__text-block {
-  height: 61px;
   width: 557px;
+  height: 61px;
 }
 @media (max-width: 750px) {
   .subscribe-box__subscribe__text-block {
@@ -137,14 +137,14 @@
 }
 @media (max-width: 750px) {
   .subscribe-box__subscribe__accept-block {
-    height: 47px;
     width: 341px;
+    height: 47px;
     margin-left: 20px;
   }
 }
 .subscribe-box__subscribe__accept-block__email {
-  height: 43px;
   width: 256px;
+  height: 43px;
   border-color: #E1E1E1;
   border-radius: 20px 0px 0px 20px;
   background: #E1E1E1;
@@ -156,8 +156,8 @@
   opacity: 0.67;
 }
 .subscribe-box__subscribe__accept-block__button {
-  height: 49px;
   width: 100px;
+  height: 49px;
   border: none;
   border-radius: 0px 21px 21px 0px;
   background: #F16D7F;

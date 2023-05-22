@@ -16,44 +16,46 @@ $form-fields-color: #B1B1B1;
 $form-fields-border-color: #A4A4A4;
 $sub-total-price-color: #4A4A4A;
 
+@mixin size ($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin display ($display: flex, $flex-direction: row, $align-items: normal, $flex-wrap: nowrap, $justify-content: flex-start){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify-content;
+}
+
 .header{
-    display: flex;
+    @include display (flex, row, center, nowrap, center);
     height: 75px;
-    align-items: center;
-    justify-content: center;
     gap: 54%;
     width: 100%;
     background: $main-font-color;
 
     &__logo-and-search{
-        display: flex;
-        height: 38px;
-        width: 111px;
-        flex-direction: row;
-        align-items: center;
+        @include display (flex, row, center);
+        @include size(111px , 38px);
         gap: 35%;
         @media (max-width: 750px){
             margin-left: 25px;
         }
 
         &_logo{
-            width: 44px;
-            height: 38px;
+            @include size(44px , 38px);
         }
 
         &__search{
             margin-top: 10px;
-            width: 26px;
-            height: 27px;
+            @include size(26px , 27px);
         }
     }
 
     &__buttons{
-        display: flex;
-        height: 38px;
-        width: 111px;
-        flex-direction: row;
-        align-items: center;
+        @include display (flex, row, center);
+        @include size(111px , 38px);
         gap: 32%;
         margin-top: 10px;
         margin-right: 2.5%;
@@ -64,33 +66,26 @@ $sub-total-price-color: #4A4A4A;
         }
 
         &__button-menu{
-            width:32px;
-            height:23px;
+            @include size(32px , 23px);
         }
 
         &__button-profile{
-            width:29px;
-            height:29px;
+            @include size(29px , 29px);
             @media (max-width: 750px){
-                width: 0px;
-                height: 0px;
+                @include size(0px , 0px);
             }
         }
 
         &__button-cart{
-            width:41px;
-            height:37px;
+            @include size(41px , 37px);
             @media (max-width: 750px){
-                width: 0px;
-                height: 0px;
+                @include size(0px , 0px);
             }
 
             &__cart{
-                width:32px;
-                height:29px;
+                @include size(32px , 29px);
                 @media (max-width: 750px){
-                    width: 0px;
-                    height: 0px;
+                    @include size(0px , 0px);
                 }
             }
 
@@ -98,15 +93,13 @@ $sub-total-price-color: #4A4A4A;
                 position: absolute;
                 margin-left: 20px;
                 margin-top: -5px;
-                width: 19px; 
-                height: 19px;
+                @include size(19px , 19px);
                 background: $notify-color;
                 border-radius: 50%;
                 @media (max-width: 750px){
                     margin-left: 0px;
                     margin-top: 0px;
-                    width: 0px; 
-                    height: 0px;
+                    @include size(0px , 0px);
                     border-radius: 0%;
                 }
 
