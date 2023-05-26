@@ -17,10 +17,20 @@ $form-fields-border-color: #A4A4A4;
 $sub-total-price-color: #4A4A4A;
 $shop-blocks-color: #F8F8F8;
 
+@mixin size ($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin display ($display: flex, $flex-direction: row, $align-items: normal, $flex-wrap: nowrap, $justify-content: flex-start){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify-content;
+}
+
 .shop-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include display (flex, column, center);
     width: 1140px;
     min-height: 58px;
     margin-left: 20px;
@@ -53,11 +63,7 @@ $shop-blocks-color: #F8F8F8;
 }
   
 .shop{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include display (flex, row, center, wrap, center);
     max-width: 1140px;
     min-height: 470px;
     gap: 30px;
@@ -75,28 +81,22 @@ $shop-blocks-color: #F8F8F8;
     }
 
     &__blocks{
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        height: 581px;
-        width: 360px;
+        @include display (flex,  row,  start,  nowrap, center);
+        @include size(360px , 581px);
         background: $shop-blocks-color;
 
         &__img{
-            height: 420px;
-            width: 360px;
+            @include size(360px , 420px);
             &:hover{
                 filter: brightness(30%);
             }
         }
 
         &__text-block{
-            display: flex;
-            flex-direction: column;
+            @include display (flex,  column);
             position: absolute;
             gap: 15px;
-            height: 116.7px;
-            width: 314.8px;
+            @include size(314.8px , 116.7px);
             margin-top: 443px;
             margin-right: 14px;
 
@@ -126,10 +126,7 @@ $shop-blocks-color: #F8F8F8;
 }
   
 .browse-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include display (flex, column, center, nowrap, center);
     margin-top: 47px;
     margin-left: 19px;
     min-height: 47px;

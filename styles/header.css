@@ -9,10 +9,10 @@
 }
 .header__logo-and-search {
   display: flex;
-  height: 38px;
-  width: 111px;
   flex-direction: row;
   align-items: center;
+  width: 111px;
+  height: 38px;
   gap: 35%;
 }
 @media (max-width: 750px) {
@@ -31,10 +31,10 @@
 }
 .header__buttons {
   display: flex;
-  height: 38px;
-  width: 111px;
   flex-direction: row;
   align-items: center;
+  width: 111px;
+  height: 38px;
   gap: 32%;
   margin-top: 10px;
   margin-right: 2.5%;

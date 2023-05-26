@@ -16,15 +16,27 @@ $form-fields-color: #B1B1B1;
 $form-fields-border-color: #A4A4A4;
 $sub-total-price-color: #4A4A4A;
 
+@mixin size ($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin display ($display: flex, $flex-direction: row, $align-items: normal, $flex-wrap: nowrap, $justify-content: flex-start){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify-content;
+}
+
 .shopping-cart{
     display: flex;
+    @include size(100% , 148px);
     height: 148px;
     width: 100%;
     background: $shopping-cart-background;
 
     &__text{
-        display: flex;
-        align-items: center;
+        @include display (flex,  row,  center,  nowrap,  flex-start);
         margin-left: 230px;
         font-size: 24px;
         line-height: 29px;
@@ -40,10 +52,7 @@ $sub-total-price-color: #4A4A4A;
 }
 
 .your-cart{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    @include display (flex, row, center, wrap);
     margin-top: 96px;
     margin-left: 15px;
     column-gap: 128px;
@@ -58,58 +67,46 @@ $sub-total-price-color: #4A4A4A;
     }  
 
     &__block{
-        display: flex;
-        flex-direction: column;
+        @include display (flex,  column,  normal,  nowrap,  flex-start);
         gap: 40px;
-        height: 800px;
-        width: 652px;
+        @include size(652px, 800px);
         @media (max-width: 750px){
-            height: 480px;
-            width: 358px; 
+            @include size(358px, 480px);
         }  
     }
 
     &__block_left{
-        display: flex;
-        flex-direction: column;
-        height: 800px;
+        @include display (flex,  column,  normal,  nowrap,  flex-start);
         gap: 55px;
-        width: 360px;
+        @include size(360px, 800px);
         @media (max-width: 1025px) and (min-width: 750px){
+            @include display (flex,  row,  normal,  nowrap,  flex-start);
             margin-left: 80px;
             margin-top: 10px;
-            flex-direction: row;
-            width: 730px; 
-            height: 425px;
+            @include size(730px, 425px);
             gap: 15px;
         } 
         @media (max-width: 750px){
+            @include display (flex,  column,  normal,  nowrap,  flex-start);
             margin-left: 0px;
             margin-top: 0px;
-            flex-direction: column;
-            width: 358px;
-            height: 600px;
+            @include size(358px, 600px);
             gap: 0px;
         }   
     }
 
     &__block__buttons-block{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
+        @include display (flex, row, center);
         gap: 193px;
         margin-top: 33px;
-        height: 49px;
-        width: 651px;
+        @include size(651px, 49px);
         @media (max-width: 1025px) and (min-width: 750px){
             gap: 45px;
             margin-top: 23px;
             margin-left: 45px;
         }
         @media (max-width: 750px){
-            height: 49px;
-            width: 350px;
+            @include size(350px, 49px);
             gap: 10px;
             margin-top: -10px;
             margin-left: 0px;
@@ -117,8 +114,7 @@ $sub-total-price-color: #4A4A4A;
 
         &__clear,
         &__continue{
-            height: 49px;
-            width: 239px;
+            @include size(239px, 49px);
             border: 1px solid #A4A4A4;
             text-transform: uppercase;;
             font-weight: 300;
@@ -127,8 +123,7 @@ $sub-total-price-color: #4A4A4A;
             color: #000000;
             background: #FFFFFF;
             @media (max-width: 750px){
-                height: 33px;
-                width: 175px;
+                @include size(175px, 33px);
                 font-size: 12px;
                 line-height: 14px;
                 text-transform: capitalize;
@@ -151,28 +146,24 @@ $sub-total-price-color: #4A4A4A;
     }
 
     &__block__staff-box{
-        display: flex;
+        @include display (flex);
         gap: 32px;
         height: 306px;
         box-shadow: 17px 19px 24px 0px $box-shadow-color;
         @media (max-width: 1025px) and (min-width: 750px){
-            height: 306px;
-            width: 734px; 
+            @include size(734px, 306px);
         }
         @media (max-width: 750px){
             margin-top: -15px;
-            height: 188px;
-            width: 358px; 
+            @include size(358px, 188px);
         } 
     } 
 
     &__form{
-        display: flex;
+        @include display (flex,  column);
         margin-top: 17px;
-        flex-direction: column;
         gap: 20px;
-        height: 272px;
-        width: 360px;
+        @include size(360px, 272px);
         box-shadow: 0px 0px 0px 0px $box-shadow-color;
 
         &__title{
@@ -183,8 +174,7 @@ $sub-total-price-color: #4A4A4A;
         }
 
         &__fields{
-            height: 43px;
-            width: 360;
+            @include size(360px, 43px);
             padding: 0rem 1.1rem;
             font-weight: 300;
             font-size: 13px;
@@ -195,8 +185,7 @@ $sub-total-price-color: #4A4A4A;
 
         &__button{
             margin-top: 5px;
-            height: 34px;
-            width: 103px;
+            @include size(103px, 34px);
             font-weight: 300;
             font-size: 11px;
             line-height: 13px;
@@ -212,27 +201,21 @@ $sub-total-price-color: #4A4A4A;
     }
 
     &__photo{
-        height: 306px;
-        width: 262px;
+        @include size(262px, 306px);
         @media (max-width: 750px){
-            height: 188px;
-            width: 144px;
+            @include size(144px, 188px);
         }
     }  
 
     &__text-block{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        @include display (flex,  column,  normal,  nowrap,  flex-start);
         gap: 43px;
         margin-top: 22px;
-        height: 306px;
-        width: 210px;
+        @include size(210px, 306px);
         @media (max-width: 750px){
             margin-top: 10px;
             margin-left: -15px;
-            height: 36px;
-            width: 138px;
+            @include size(138px, 36px);
             gap: 23px; 
         }
 
@@ -247,16 +230,12 @@ $sub-total-price-color: #4A4A4A;
         }
 
         &__main{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
+            @include display (flex,  column,  normal,  nowrap,  flex-start);
             gap: 6px;
             margin-top: -2px;
-            height: 100px;
-            width: 210px;
+            @include size(210px, 100px);
             @media (max-width: 750px){
-                height: 200px;
-                width: 144px;
+                @include size(144px, 200px);
                 gap: 4px;
             }
 
@@ -288,21 +267,16 @@ $sub-total-price-color: #4A4A4A;
         color: #656565;
         border: 1px solid $form-fields-border-color;
         @media (max-width: 750px){
-            height: 15px;
-            width: 24px;
+            @include size(24px, 15px);
             font-size: 10px;
             line-height: 12px;
         }
     }
 
     &__cheque{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
+        @include display (flex, column, center);
         gap: 19px;
-        height: 214px;
-        width: 360px;
+        @include size(360px, 214px);
         text-align: end;
         background: #F5F3F3;
         @media (max-width: 1025px) and (min-width: 750px){
@@ -315,14 +289,11 @@ $sub-total-price-color: #4A4A4A;
         }
         
         &__text-box{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
+            @include display (flex,  column,  normal,  nowrap,  flex-start);
             gap: 12px;
             margin-top: 41px;
             margin-left: 47px;
-            height: 45px;
-            width: 250px;
+            @include size(250px, 45px);
 
             &__sub-total, 
             &__sub-total_price{
@@ -354,14 +325,12 @@ $sub-total-price-color: #4A4A4A;
         }
 
         &__line{
-            height: 1px;
-            width: 275px;
+            @include size(275px, 1px);
             background: #E2E2E2;
         }
 
         &__submit{
-            height: 50px;
-            width: 273px;
+            @include size(273px, 50px);
             border: 0px;
             background: $submit-button-color;
             font-weight: 300;

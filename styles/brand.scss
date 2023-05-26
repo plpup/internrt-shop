@@ -16,10 +16,20 @@ $form-fields-color: #B1B1B1;
 $form-fields-border-color: #A4A4A4;
 $sub-total-price-color: #4A4A4A;
 
+@mixin size ($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin display ($display: flex, $flex-direction: row, $align-items: normal, $flex-wrap: nowrap, $justify-content: flex-start){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify-content;
+}
+
 .brand{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include display (flex, row, center);
     width: 100%;
     max-width: 1600px;
     @media (max-width: 750px){
@@ -27,44 +37,33 @@ $sub-total-price-color: #4A4A4A;
     }
 
     &-background{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
+        @include display (flex, row, center);
         gap: 4%;
-        height: 764px;
-        width: 100%;
+        @include size(100% , 764px);
         background-color: $brand-background-color;
         @media (max-width: 1025px) and (min-width: 750px){
-            height: 367px;
-            width: 100%;
+            @include size(100% , 367px);
         }
         @media (max-width: 750px){
-            height: 367px;
-            width: 100%;
+            @include size(100% , 367px);
         }
     }
 
     &__photo{ 
-        width: 800px;
-        height: 764px;;
+        @include size(800px, 764px);
         @media (max-width: 1025px) and (min-width: 750px){
-            height: 368px;
-            width: 386px;
+            @include size(386px, 368px);
         }
         @media (max-width: 750px){
-            height: 0px;
-            width: 0px;
+            @include size(0px, 0px);
         }
     }
 
     &__decoration-and-text{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
+        @include display (flex, row, center);
         margin-top: -90px;
         gap: 15px;
-        width: 700px;
-        height: 93px;
+        @include size(700px, 93px);
         @media (max-width: 1025px) and (min-width: 750px){
             margin-top: -5px;
         }
@@ -73,8 +72,7 @@ $sub-total-price-color: #4A4A4A;
         }
 
         &__decoration{
-            height: 92px;
-            width: 12px;
+            @include size(12px, 92px);
             margin-right: 0px;
             background: $decoration-color;
             @media (max-width: 1025px) and (min-width: 750px){
@@ -89,8 +87,7 @@ $sub-total-price-color: #4A4A4A;
         &__text-block{
             display: flex;
             flex-wrap: nowrap;
-            width: 700px;
-            height: 93px; 
+            @include size(700px, 93px);
             
             &__text_main{
                 position: relative;

@@ -16,8 +16,8 @@
   }
 }
 .footer__text-box {
-  height: 19px;
   width: 250px;
+  height: 19px;
 }
 @media (max-width: 750px) {
   .footer__text-box {
@@ -25,19 +25,19 @@
   }
 }
 .footer__text-box__text {
-  height: 19px;
   width: 250px;
+  height: 19px;
   font-size: 16px;
   line-height: 19.2px;
   color: #FBFBFB;
 }
 .footer__logos {
   display: flex;
-  align-items: center;
   flex-direction: row;
+  align-items: center;
   gap: 7px;
-  height: 32px;
   width: 200px;
+  height: 32px;
 }
 @media (max-width: 750px) {
   .footer__logos {
@@ -46,8 +46,8 @@
   }
 }
 .footer__logos__each {
-  height: 32px;
   width: 32px;
+  height: 32px;
   background: #FBFBFB;
 }
 .footer__logos__each__img {

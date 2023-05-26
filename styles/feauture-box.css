@@ -1,8 +1,8 @@
 .feature-box {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1600px;
@@ -31,9 +31,9 @@
 }
 .feature-box__blocks {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   min-height: 250px;
   width: 360px;
   background: #222222;
@@ -41,25 +41,25 @@
 @media (max-width: 1025px) and (min-width: 750px) {
   .feature-box__blocks {
     width: 700px;
-    min-height: 150px;
     height: 150px;
+    min-height: 150px;
   }
 }
 @media (max-width: 750px) {
   .feature-box__blocks {
     width: 375px;
-    min-height: 150px;
     height: 150px;
+    min-height: 150px;
   }
 }
 .feature-box__blocks__img {
-  height: 40px;
   width: 40px;
+  height: 40px;
 }
 .feature-box__blocks__text-block {
   margin-top: 20px;
-  height: 74px;
   width: 360px;
+  height: 74px;
   text-align: center;
 }
 .feature-box__blocks__text-block__title-text {
@@ -72,8 +72,8 @@
   position: relative;
   margin-left: 22px;
   margin-top: 18px;
-  height: 24px;
   width: 320px;
+  height: 24px;
   font-weight: 300;
   font-size: 13.972px;
   line-height: 17px;

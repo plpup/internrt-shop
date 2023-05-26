@@ -16,12 +16,20 @@ $form-fields-color: #B1B1B1;
 $form-fields-border-color: #A4A4A4;
 $sub-total-price-color: #4A4A4A;
 
+@mixin size ($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin display ($display: flex, $flex-direction: row, $align-items: normal, $flex-wrap: nowrap, $justify-content: flex-start){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify-content;
+}
+
 .categories{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include display (flex, row, flex-start, wrap, center);
     max-width: 1200px;
     min-height: 470px;
     gap: 30px;
@@ -42,24 +50,19 @@ $sub-total-price-color: #4A4A4A;
     }
 
     &__blocks{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display (flex,  row,  center,  nowrap,  center);
         max-width: 700px;
         height: 260px;
         @media (max-width: 1025px) and (min-width: 750px){
-            height: 167px;
-            width: 232px;
+            @include size(232px , 167px);
         }
         @media (max-width: 750px){
-            height: 247px;
-            width: 343px;
+            @include size(343px , 247px);
         }
 
         &__text-block{
             position: absolute;
-            height: 50px;
-            width: 160px;
+            @include size(160px , 50px);
             text-align: center;
 
             &__white-text{
@@ -83,19 +86,15 @@ $sub-total-price-color: #4A4A4A;
     }
 
     &__second-row{
-        display: flex;
-        align-items: center;
+        @include display (flex, row, center, nowrap, center);
         align-content: stretch;
-        justify-content: center;
         max-width: 1140px;
         height: 180px;
         @media (max-width: 1025px) and (min-width: 750px){
-            height: 116px;
-            width: 735px;
+            @include size(735px , 116px);
         }
         @media (max-width: 750px){
-            height: 111px;
-            width: 343px; 
+            @include size(343px , 111px);
         }
     }
 } 
